@@ -4,7 +4,7 @@
 }
 
 html {
-    background-image: url(index_files/index_background.png);
+    background: url(index_files/index_background.png);
   }
 
 @font-face {
@@ -162,9 +162,102 @@ html {
     text-align: justify;
 }
 
-/*.redactors{
-     background: url(index_files/Frame\ 18.png) center;
+.redactors{
+     background: url(index_files/index_background_redactors.png) center;
      width: 100%;
-     height: 879px;
-  
-}*/
+     height: 961px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+
+.redactors_title{
+    
+    width: 100%;
+    text-align: center;
+
+    margin-top: 200px;
+
+    font-family: 'Code Pro Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+
+    color: #000000;
+}
+
+.redactors_main{
+    width: 95%;
+    /*background-color:  blue;*/
+    background-size: cover;
+    /*height: 200px;*/
+    margin-top: 43px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.redactors_profile{
+    background-size: cover;
+    /*background-color:  red;*/
+   /* width: 90%;
+    height: 200px;*/
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+
+}
+
+.redactors_circles{
+    position: relative;
+    border: 5px dashed #FFFFFF;
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redactors_name{
+    position: relative;
+    width: 596px;
+    height: 75px;
+    border: 5px dashed #FFFFFF;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items:normal;
+    justify-content: center;
+}
+
+.name{
+    margin-left: 19px;
+    font-family: 'Code Pro Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+}
+
+.info{
+    margin-left: 19px;
+    font-family: 'Dhyana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+.redactor_photo{
+    width: 80px;
+    height: 80px;
+}
