@@ -176,8 +176,6 @@ html {
 }
 
 .info{
-    /*width: 788px;*/
-    /*background-size: cover;*/
     width: 95%;
     display: flex;
     align-items: center;
