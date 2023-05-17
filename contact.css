@@ -27,33 +27,49 @@ html {
     font-style: normal;
     }
 
-.header{
+.header{        
     height: 73px;
     width: 100%;
     background-color: #6A5ACD;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
 }
-
+    
+.header_inside{
+    /*background-color: red;*/
+    width: 95%;
+    display: flex;
+    justify-content: center; 
+ }
+    
 .header_title{
-    position: absolute;
-    width: 100%;
-    text-align: center;
-
-    margin-top: 20px;
+    /*background-color: green;*/
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    align-items: center;
     font-family: 'Code Pro Bold';
     font-weight: 400;
     font-size: 28;
     line-height: 34px;
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-}
-
+    }
+    
 .header_logo{
-    position: absolute;
-    margin-left: 15%;
-    margin-top: 5px;
-
     width: 70px;
     height: 64.3px;
+    margin-right: 50px;
+}
+    
+.header_empty{
+    width: 70px;
+    height: 64.3px;
+    /*background-color: #000000;*/
+    margin-left: 50px;
 }
 
 .menu{
@@ -63,7 +79,6 @@ html {
     display: flex;
 
 }
-
 
 .menu_1{
     position: absolute;
@@ -106,9 +121,7 @@ html {
 }
 
 .intro{
-    
     background-size: cover;
-   /* background-color:  red;*/
 
     display: flex;
     flex-direction: column;
@@ -138,6 +151,18 @@ html {
     margin-top: 47px;
 
     padding-top: 71px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.intro_premain{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .forma{
@@ -151,9 +176,9 @@ html {
 }
 
 .info{
-    width: 788px;
-    background-size: cover;
-    
+    /*width: 788px;*/
+    /*background-size: cover;*/
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,7 +187,7 @@ html {
 .intro_circle{
     position: relative;
     border: 5px dashed #FFFFFF;
-    border-radius: 50px;
+    border-radius: 60px;
     height: 100px;
     width: 100px;
 
@@ -227,8 +252,7 @@ html {
 }
 
 .social_media{
-    width: 788px;
-    background-size: cover;
+    width: 100%;
     margin-top: 36px;
     display: flex;
     align-items: center;
@@ -244,7 +268,7 @@ html {
 .social_media_circle{
     position: relative;
     border: 5px dashed #FFFFFF;
-    border-radius: 40px;
+    border-radius: 50px;
     height: 80px;
     width: 80px;
 
@@ -409,4 +433,211 @@ html {
 
 .phone_photo{
     margin-left: 20px;
+}
+
+.header_burger{
+    display: none;
+}
+
+@media screen and (max-width: 819px){
+    .intro_main{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .intro{
+        margin-top: -70px;
+    }
+
+    .menu_1{
+        position: absolute;
+
+        top: 0;
+        right: 0;
+
+        width: auto;
+        height: auto;
+        background: none; 
+    }
+    
+   .menu_2{
+        position: fixed;
+        right: -50%;
+        background-color: #A294FF;
+        flex-direction: column;
+        width: 45%;
+        height: 100%;
+        align-items: center;
+        z-index: 40;
+        top: 0;
+        padding-top: 70px;
+        transition: all 0.5s ease 0s; 
+   }
+
+   .circle_1{
+        height: 30px;
+        border-radius: 0 0 0 0;
+        margin-top: 40px;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+   }
+
+   .menu_text{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 23px;
+    }
+   .header_burger{
+        display: block;
+        position: relative;
+        top: 20px;
+        right: 15px;
+        width: 40px;
+        height: 30px;
+
+        z-index: 100;
+    }
+
+    .header_burger::after,
+    .header_burger::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 3px;
+        width: 100%;
+
+        background-color: #FFFFFF;
+        transition: all 0.5s ease 0s;
+    }
+
+    .header_burger span{
+        position: absolute;
+        background-color: #FFFFFF;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        top: 13.5px;
+        transition: all 0.5s ease 0s;
+    }
+
+    .menu_2.active{
+        position: absolute;
+        right: 0;
+    }
+
+    .header_burger::before{
+         top: 0;
+    }
+
+    .header_burger::after{
+        bottom: 0;
+    }
+
+    .header_burger.active::before{
+        transform: rotate(45deg);
+        top: 14px;
+    }
+
+    .header_burger.active::after{
+        transform: rotate(-45deg);
+        bottom: 13px;
+    }
+
+    .header_burger.active span{
+        transform: scale(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .header_title{
+        width: 200px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .social_media_circle{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .info_text{
+        width: 300px;
+    }
+
+    .intro_text_3{
+        margin-left: 80px; 
+    }
+}
+
+@media screen and (max-width: 619px){
+    .pre_form{
+        height: fit-content;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+   }
+
+   .form_frame{
+        width: 100%;
+   }
+
+   .form_text{
+        width: 90%;
+   }
+
+   .formstyle_name{
+        width: 75%;
+   }
+
+   .formstyle_emale{
+        width: 75%;
+   }
+
+   .formstyle_sms{
+        width: 75%;
+   }
+}
+
+@media screen and (max-width: 535px){
+    .social_media_circle{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+
+@media screen and (max-width: 486px){
+    .header_title{
+        font-size: 14px;
+    }
+
+    .header_logo{
+        margin-right: 28px;
+    }
+
+    .header_empty{
+        margin-left: 28px;
+    }
+}
+
+@media screen and (max-width: 455px){
+    .social_media_circle{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .info_text{
+        width: 252px;
+    }
+
+    .intro_text_3{
+        margin-left: 30px; 
+    }
 }

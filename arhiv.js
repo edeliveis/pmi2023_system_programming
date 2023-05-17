@@ -4,6 +4,6 @@ $(document).ready(function() {
     });
 });
 
-$('.intro, .info_for_authors').click(function(event) {
+$('.intro, .info').click(function(event) {
     $('.header_burger, .menu_2').removeClass('active');
 });
