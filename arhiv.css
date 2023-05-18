@@ -240,6 +240,11 @@ a:hover {
     cursor: pointer;
 }
 
+.button_inside:hover{
+    width: 150px;
+    height: 30px;
+}
+
 .header_burger{
     display: none;
 }

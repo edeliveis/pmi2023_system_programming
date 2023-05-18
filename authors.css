@@ -269,13 +269,19 @@ color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: none;
 }
 
 .icon_photo{
     width: 85px;
     height: 85px;
     cursor: pointer;
+    transition: 0.3s;
 }
+
+.icon_photo:hover {
+    transform: scale(0.8); /* Увеличиваем масштаб */
+   }
 
 .header_burger{
     display: none;
