@@ -103,7 +103,7 @@
 
         <div class="pre_form">
         <div class="form_frame"> Форма обратной связи
-            <form action="forma.php" class="form" method="POST">
+            <form id="form" action="forma.php" class="form" method="POST">
                 <div class="send_form">
                 
                     <div class="input_forms">
@@ -112,7 +112,7 @@
                             <p class="star">*</p>
                         </div>
 
-                        <input name="name" type="text" class="formstyle_name" placeholder="Ваше имя" required>
+                        <input id="name" name="name" type="text" class="formstyle_name" placeholder="Ваше имя" required>
 
                         <div class="space"></div>
 
@@ -121,13 +121,13 @@
                             <p class="star">*</p>
                         </div>
 
-                        <input name="email" type="email" class="formstyle_emale" placeholder="Ваш e-mail" required>
+                        <input id="email" name="email" type="email" class="formstyle_emale" placeholder="Ваш e-mail" required>
                     </div>
 
                     <div class="space"></div>
                     <div class="form_text"><p class="form_text_1">Сообщение:</p></div>
                     
-                    <textarea name="sms" class="formstyle_sms" placeholder="Сообщение"></textarea>
+                    <textarea id="sms" name="sms" class="formstyle_sms" placeholder="Сообщение"></textarea>
 
                     <button class="send_button">ОТПРАВИТЬ</button>
 
@@ -149,7 +149,9 @@
     </div> 
 
     <script src="jquery-3.6.4.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="contact.js"></script>
-
+    <script src="contact_forma.js"></script>
+    
 </body>
 </html>
