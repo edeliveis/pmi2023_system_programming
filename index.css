@@ -98,8 +98,9 @@ html {
     /*background-color:  #787575;*/
 }
 
-a:hover { 
-    margin-top: 20px;
+.menu_text:hover{
+    color: #FFFFFF;
+    transition: 0.4s;
 }
 
 .circle_1{
@@ -400,6 +401,9 @@ a:hover {
     display: none;
 }
 
+.fixed-page{
+    overflow: hidden; 
+}
 
 @media screen and (max-width: 1000px) {
     .intro_main
@@ -426,11 +430,6 @@ a:hover {
         margin-top: -70px;
     }
 
-    a.silka:hover { 
-        margin-top: 0px;
-        margin-right: 50px;
-    }
-
     .menu_1{
         position: absolute;
 
@@ -444,19 +443,15 @@ a:hover {
     
     .menu_2{
         position: fixed;
-        right: -100%;
+        right: -50%;
         background-color: #A294FF;
         flex-direction: column;
-        width: 150px;
-        height: 650px;
-        border-radius: 500px 0px 0px 500px;
+        width: 45%;
+        height: 100%;
         align-items: center;
         z-index: 40;
-        top: 0;
-        padding-top: 70px;
+        top: 10;
         transition: all 0.5s ease 0s; 
-
-        padding-right: 50px;
    }
 
    .circle_1{
@@ -464,11 +459,14 @@ a:hover {
         border-radius: 100px;
         margin-top: 52px;
         margin-left: 0px;
-        margin-right: 80px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+   }
+
+   #contacti{
+        margin-bottom: 100px;
    }
 
    .menu_text{
@@ -476,6 +474,12 @@ a:hover {
         margin-top: 0px;
         font-size: 23px;
     }
+
+    .menu_2.active{
+        right: 0;
+        overflow: auto;
+    }
+
    .header_burger{
         display: block;
         position: relative;
@@ -509,17 +513,16 @@ a:hover {
         transition: all 0.5s ease 0s;
     }
 
-    .menu_2.active{
-        right: 0;
-        position: absolute;
-    }
-
     .header_burger::before{
          top: 0;
     }
 
     .header_burger::after{
         bottom: 0;
+    }
+
+    .header_burger.active{
+        right: 35px;
     }
 
     .header_burger.active::before{
