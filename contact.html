@@ -103,7 +103,7 @@
 
         <div class="pre_form">
         <div class="form_frame"> Форма обратной связи
-            <form action="" class="form">
+            <form action="forma.php" class="form" method="POST">
                 <div class="send_form">
                 
                     <div class="input_forms">
@@ -112,7 +112,7 @@
                             <p class="star">*</p>
                         </div>
 
-                        <input type="text" class="formstyle_name" placeholder="Ваше имя" required>
+                        <input name="name" type="text" class="formstyle_name" placeholder="Ваше имя" required>
 
                         <div class="space"></div>
 
@@ -121,13 +121,13 @@
                             <p class="star">*</p>
                         </div>
 
-                        <input type="email" class="formstyle_emale" placeholder="Ваш e-mail" required>
+                        <input name="email" type="email" class="formstyle_emale" placeholder="Ваш e-mail" required>
                     </div>
 
                     <div class="space"></div>
                     <div class="form_text"><p class="form_text_1">Сообщение:</p></div>
                     
-                    <textarea class="formstyle_sms" placeholder="Сообщение"></textarea>
+                    <textarea name="sms" class="formstyle_sms" placeholder="Сообщение"></textarea>
 
                     <button class="send_button">ОТПРАВИТЬ</button>
 
